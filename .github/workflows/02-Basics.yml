@@ -1,4 +1,4 @@
-name: Deploy Project
+name: 02 Basics
 on: workflow_dispatch
 jobs:
   test:

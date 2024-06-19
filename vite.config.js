@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { configDefaults } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import eslint from 'vite-plugin-eslint';
 
@@ -9,5 +10,6 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/test/setup.js',
+    exclude: [...configDefaults.exclude, './Code/**/*'],
   },
 });

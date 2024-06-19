@@ -1,0 +1,8 @@
+name: 02 Basics - Practice Step2
+on: issues
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output Github context event
+        run: echo "${{ toJSON(github.event) }}"

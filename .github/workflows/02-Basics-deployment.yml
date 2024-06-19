@@ -1,4 +1,4 @@
-name: 02 Basics
+name: 02 Basics - Deployment
 on: workflow_dispatch
 jobs:
   test:

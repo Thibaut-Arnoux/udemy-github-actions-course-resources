@@ -10,6 +10,12 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
+        include:
+          - php-version: 8.2
+            os: maxos-latest
+        exclude:
+          - php-version: 7.4
+          - os: windows-latest
     runs-on: ${{ matrix.os }}
     steps:
       - name: Setup Php

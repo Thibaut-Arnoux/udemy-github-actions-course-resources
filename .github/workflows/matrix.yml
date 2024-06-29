@@ -11,10 +11,10 @@ jobs:
           - ubuntu-latest
           - windows-latest
         include:
-          - php-version: 8.2
-            os: maxos-latest
+          - php-version: 8.1
+            os: ubuntu-latest
         exclude:
-          - php-version: 7.4
+          - php-version: 8.2
           - os: windows-latest
     runs-on: ${{ matrix.os }}
     steps:

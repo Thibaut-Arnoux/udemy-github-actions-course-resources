@@ -7,6 +7,10 @@ on:
         description: The name of de the deployable artifact files
         required: false
         default: "dist"
+    outputs:
+      result:
+        description: The result of the deployment
+        value: ${{ jobs.deploy.outputs.job-result }}
     secrets:
       token:
         description: The Github token
@@ -14,6 +18,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    outputs:
+      job-result: ${{ steps.set-result.outputs.step-result }}
     steps:
       - name: Get build artifacts
         uses: actions/download-artifact@v3
@@ -23,3 +29,6 @@ jobs:
         run: ls
       - name: Deploy
         run: echo "Deploying..."
+      - name: Output result
+        id: set-result
+        run: echo 'step-result=success' >> $GITHUB_OUTPUT ';'

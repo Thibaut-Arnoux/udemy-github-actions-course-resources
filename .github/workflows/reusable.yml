@@ -5,8 +5,12 @@ on:
       artifact-name:
         type: string
         description: The name of de the deployable artifact files
-        required: true
+        required: false
         default: "dist"
+    secrets:
+      token:
+        description: The Github token
+        required: false
 jobs:
   deploy:
     runs-on: ubuntu-latest

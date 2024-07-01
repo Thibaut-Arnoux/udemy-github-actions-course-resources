@@ -71,6 +71,8 @@ jobs:
     uses: ./.github/workflows/reusable.yml
     with:
       artifact-name: dist-files
+    # secrets:
+    #   token: ${{ secrets.GITHUB_TOKEN }}
   report:
     needs:
       - lint

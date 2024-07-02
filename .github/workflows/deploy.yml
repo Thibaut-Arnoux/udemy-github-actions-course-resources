@@ -22,13 +22,13 @@ jobs:
         PORT: 8080
     steps:
       - name: Output information
-        run: echo "ls -la"
+        run: ls -la
       - name: Output path
-        run: echo "pwd"
+        run: pwd
       - name: Move to woking directory
-        run: echo "cd /app"
+        run: cd /app
       - name: Output information
-        run: echo "ls -la"
+        run: ls -la
       - name: Run tests
         run: npm test
       - name: Output information

@@ -21,6 +21,8 @@ jobs:
         MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
         PORT: 8080
     steps:
+      - name: Output information
+        run: echo "ls -la"
       - name: Run tests
         run: npm test
       - name: Output information

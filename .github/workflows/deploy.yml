@@ -23,6 +23,12 @@ jobs:
     steps:
       - name: Output information
         run: echo "ls -la"
+      - name: Output path
+        run: echo "pwd"
+      - name: Move to woking directory
+        run: echo "cd /app"
+      - name: Output information
+        run: echo "ls -la"
       - name: Run tests
         run: npm test
       - name: Output information

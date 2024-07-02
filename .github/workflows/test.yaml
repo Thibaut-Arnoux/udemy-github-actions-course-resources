@@ -1,0 +1,14 @@
+name: test container
+
+on: workflow_dispatch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: frooodle/s-pdf
+    steps:
+      - name: Output File
+        run: ls -la
+      - name: Output Path
+        run: pwd

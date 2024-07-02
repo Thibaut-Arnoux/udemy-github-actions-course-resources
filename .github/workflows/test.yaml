@@ -6,9 +6,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: frooodle/s-pdf
+      image: php:8.3-cli
     steps:
       - name: Output File
         run: ls -la
       - name: Output Path
         run: pwd
+      - name: Output config
+        run: ls /usr/local/etc/php/conf.d/

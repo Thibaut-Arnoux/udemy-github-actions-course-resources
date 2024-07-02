@@ -6,11 +6,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: php:8.3-cli
+      image: thibautarnoux/udemy-github-action
     steps:
       - name: Output File
         run: ls -la
       - name: Output Path
         run: pwd
       - name: Output config
-        run: ls /usr/local/etc/php/conf.d/
+        run: ls /app

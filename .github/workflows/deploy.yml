@@ -72,4 +72,4 @@ jobs:
       - name: Run Hello World js action
         uses: ./.github/actions/hello-world-javascript
         with:
-          who-to-great: World
+          who-to-great: "World"

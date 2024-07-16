@@ -4,7 +4,7 @@ const exec = require('@actions/exec');
 
 function run() {
     // extract input
-    const input = core.getInput('who-to-greet', { required: true });
+    const input = core.getInput('who-to-great', { required: true });
 
     core.notice(`Hello ${input} ! From javascript action!`);
 }

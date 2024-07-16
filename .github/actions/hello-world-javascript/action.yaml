@@ -4,7 +4,6 @@ inputs:
   who-to-great:
     description: "Who to greet"
     required: true
-    default: "World"
 outputs:
   time:
     description: "The time we greeted you"

@@ -70,6 +70,10 @@ jobs:
       - name: Get code # required due to local actions
         uses: actions/checkout@v3
       - name: Run Hello World js action
+        id: hello
         uses: ./.github/actions/hello-world-javascript
         with:
           who-to-great: "World"
+      - name: Output information
+        run: |
+          echo "Time: ${{ steps.hello.outputs.time }}"

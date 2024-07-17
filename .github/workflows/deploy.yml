@@ -69,7 +69,7 @@ jobs:
     steps:
       - name: Get code # required due to local actions
         uses: actions/checkout@v3
-      - name: Run Hello World js action
+      - name: Run Hello World from custom action
         id: hello
         uses: ./.github/actions/hello-world-docker
         with:

@@ -1,0 +1,12 @@
+name: "Hello World"
+description: "Prints Hello World"
+inputs:
+  who-to-great:
+    description: "Who to greet"
+    required: true
+outputs:
+  time:
+    description: "The time we greeted you"
+runs:
+  using: "docker"
+  image: "Dockerfile"
